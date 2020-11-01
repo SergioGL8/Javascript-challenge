@@ -5,10 +5,15 @@
 var tableData = data;
 
 // function to display UFO sightings
-function tableDisplay(ufoSightings) {
+function displayData(Sightings) {
+
+  // select tbody
   var tbody = d3.select("tbody");
-  ufoSightings.forEach((ufoRecord) => {
+  Sightings.forEach((ufoRecord) => {
     var row = tbody.append("tr");
+    
+    // using Object.entries to get key, value data inside of the table
+    // and loop through them to add to the table in html
     Object.entries(ufoRecord).forEach(([key, value]) => {
       var cell = row.append("td");
       cell.html(value);
@@ -23,23 +28,26 @@ function deleteTbody() {
     .selectAll("td").remove();
 };
 
-// initial display of all UFO sightings
+// display of all UFO sightings
 console.log(tableData);
-tableDisplay(tableData);
+displayData(tableData);
 
 // 'Filter Table' button
 var button = d3.select("#filter-btn");
 
-// filter the database and display
+// filter data with date that the user inputs and display
 button.on("click", function(event) {
   d3.event.preventDefault();
   deleteTbody();
   var dateInput = d3.select("#datetime").property("value");
   
+
   if (dateInput.trim() === "" ) {
-    // display the whole database if the date field has no date
+
+    // display the database if the date field has no date
     var filteredData = tableData;
   } else {
+
     // otherwise, display the filtered dataset  
     var filteredData = tableData.filter(ufoSighting => 
       ufoSighting.datetime === dateInput.trim());
@@ -51,9 +59,9 @@ button.on("click", function(event) {
       .append("tr")
       .append("td")
         .attr("colspan", 7)
-        .html("<h4>No Records Found</h4>");
+        .html("<h3>No Records Found</h3>");
   };
 
   console.log(filteredData);
-  tableDisplay(filteredData);
+  displayData(filteredData);
 });
