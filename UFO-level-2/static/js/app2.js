@@ -35,23 +35,16 @@ displayData(tableData);
 // 'Filter Table' button
 var button = d3.select("#filter-btn");
 
-// filter data with date that the user inputs and display
+// filter data with the properties that the user inputs and display
 button.on("click", function(event) {
   d3.event.preventDefault();
   deleteTbody();
-  var dateInput = d3.select("#datetime").property("value");
-  
 
-  if (dateInput.trim() === "" ) {
+  var filteredData = tableData;
+  var input = document.getElementsByClassName("form-control");
 
-    // display the database if the date field has no date
-    var filteredData = tableData;
-  } else {
 
-    // otherwise, display the filtered dataset  
-    var filteredData = tableData.filter(ufoSighting => 
-      ufoSighting.datetime === dateInput.trim());
-  };
+
 
   // display a message if no records found
   if (filteredData.length == 0) {
