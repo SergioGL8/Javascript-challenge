@@ -53,7 +53,7 @@ button.on("click", function(event) {
       ufoSighting.datetime === dateInput.trim());
   };
 
-  // display message if no records found
+  // display a message if no records found
   if (filteredData.length == 0) {
     d3.select("tbody")
       .append("tr")
@@ -62,6 +62,7 @@ button.on("click", function(event) {
         .html("<h3>No Records Found</h3>");
   };
 
+  // print the value and display the new table that was input
   console.log(filteredData);
   displayData(filteredData);
 });
