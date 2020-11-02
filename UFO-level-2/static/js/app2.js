@@ -4,7 +4,7 @@
 // from data.js
 var tableData = data;
 
-// function to display UFO sightings
+// function to display all
 function displayData(Sightings) {
 
   // select tbody
@@ -28,7 +28,7 @@ function deleteTbody() {
     .selectAll("td").remove();
 };
 
-// display of all UFO sightings
+// display all 
 console.log(tableData);
 displayData(tableData);
 
@@ -43,7 +43,7 @@ button.on("click", function(event) {
   var filteredData = tableData;
   var input = document.getElementsByClassName("form-control");
 
-  // iterate through all the input fields
+  // iterate through the input fields
   for (var i = 0; i < input.length; i++) {
 
     var idName = input[i].id;
@@ -52,13 +52,12 @@ button.on("click", function(event) {
     // treat empty or space-only fields as a search for ALL for that field
     if (field.trim() !== "") {
       var filteredData = filteredData.filter(ufoSighting =>
+
         // match as case insensitive
         ufoSighting[idName].toUpperCase().trim() ===
         field.toUpperCase().trim());
     };
   };
-
-
 
   // display a message if no records found
   if (filteredData.length == 0) {

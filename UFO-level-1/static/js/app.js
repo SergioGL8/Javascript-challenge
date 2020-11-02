@@ -4,7 +4,7 @@
 // from data.js
 var tableData = data;
 
-// function to display UFO sightings
+// function to display all
 function displayData(Sightings) {
 
   // select tbody
