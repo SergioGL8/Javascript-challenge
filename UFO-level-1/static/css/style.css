@@ -98,9 +98,9 @@ select {
   padding: 20px;
   margin: 0;
   background: black;
-  background-image: url("../images/nasa.jpg");
+  background-image: url("../images/tierra.jpg");
   background-attachment: fixed;
-  background-position: bottom center;
+  background-position: middle center;
   background-size: cover;
 }
 
@@ -200,6 +200,7 @@ select {
   to {
     font-size: 7.5rem;
     opacity: 1;
+    color: darkgray;
   }
 }
 
@@ -211,6 +212,7 @@ select {
   to {
     font-size: 5.5rem;
     opacity: 1;
+    color: darkgray;
   }
 }
 
