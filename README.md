@@ -23,7 +23,6 @@ Common files
 <br>
 *static/js/data.js -- provided UFO dataset for the assignment.
 <br>
----
 
 ### Level1 <a name="1"></a>
 #### Automatic Table and Date Search files
@@ -35,7 +34,6 @@ Files
 <br>
 *static/js/app.js -- JavaScript for index.html webpage functionality.
 <br>
----
 
 ### Level 2 <a name="2"></a>
 #### Multiple Search Categories files (optional and complete)
