@@ -5,6 +5,7 @@
 ---
 Table of contents <a name="toc"></a>
 
-1. [Kaggle Dataset](#kaggle)
-2. [ERD](#erd)
-3. [postgreSQL Statatements](#psql)
+1. [Starter code](#start)
+2. [Level1](#1)
+3. [Level2](#2)
+
