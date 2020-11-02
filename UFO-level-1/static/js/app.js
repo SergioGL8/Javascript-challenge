@@ -5,16 +5,16 @@
 var tableData = data;
 
 // function to display all
-function displayData(Sightings) {
+function displayData(data) {
 
   // select tbody
   var tbody = d3.select("tbody");
-  Sightings.forEach((ufoRecord) => {
+  data.forEach((item) => {
     var row = tbody.append("tr");
     
     // using Object.entries to get key, value data inside of the table
     // and loop through them to add to the table in html
-    Object.entries(ufoRecord).forEach(([key, value]) => {
+    Object.entries(item).forEach(([key, value]) => {
       var cell = row.append("td");
       cell.html(value);
     });

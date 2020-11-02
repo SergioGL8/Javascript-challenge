@@ -5,11 +5,11 @@
 var tableData = data;
 
 // function to display UFO sightings
-function tableDisplay(ufoSightings) {
+function dataDisplay(data) {
   var tbody = d3.select("tbody");
-  ufoSightings.forEach((ufoRecord) => {
+  data.forEach((item) => {
     var row = tbody.append("tr");
-    Object.entries(ufoRecord).forEach(([key, value]) => {
+    Object.values(item).forEach(([key, value]) => {
       var cell = row.append("td");
       cell.html(value);
     });
@@ -25,7 +25,7 @@ function deleteTbody() {
   
 // initial display of all UFO sightings
 console.log(tableData);
-tableDisplay(tableData);
+dataDisplay(tableData);
 
 // 'Filter Table' button
 var button = d3.select("#filter-btn");
@@ -46,12 +46,12 @@ button.on("click", function(event) {
 	var field = d3.select("#" + idName).property("value");
 	
 	// treat empty or space-only fields as a search for ALL for that field
-	if (field.trim() !== "") {
-	  var filteredData = filteredData.filter(ufoSighting =>
+	  if (field.trim() !== "") {
+	    var filteredData = filteredData.filter(ufoSighting =>
 	    // match as case insensitive
-		ufoSighting[idName].toUpperCase().trim() ===
-		field.toUpperCase().trim());
-	};
+	  	ufoSighting[idName].toLowerCase().trim() ===
+		  field.toLowerCase().trim());
+  	};
   };
  
   // display message if no records found
@@ -65,5 +65,5 @@ button.on("click", function(event) {
   
   // display the database
   console.log(filteredData);
-  tableDisplay(filteredData);
+  dataDisplay(filteredData);
 });
