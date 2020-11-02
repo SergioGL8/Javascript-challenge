@@ -13,7 +13,7 @@ Table of contents <a name="toc"></a>
 
 ### Starter code <a name="start"></a>
 
-Common files
+#### Common files
 
 *index.html -- provided html page for the assignment.
 <br>
@@ -28,7 +28,7 @@ Common files
 #### Automatic Table and Date Search files
 <sub><sup>[Go back to the table of contents](#toc)</sub></sup>
 
-Files
+##### Files
 
 *index.html -- UFO Finder webpage (date search).
 <br>
@@ -39,7 +39,7 @@ Files
 #### Multiple Search Categories files (optional and complete)
 <sub><sup>[Go back to the table of contents](#toc)</sub></sup>
 
-Files
+##### Files
 
 *index2.html -- UFO Finder webpage (five field search).
 <br>
