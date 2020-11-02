@@ -80,10 +80,6 @@ function handleClick (){
         .attr("colspan", 7)
         .html("<h4>No Records Found</h4>");
   };
-  
-  // display the database
-  console.log(filterData);
-  displayData(filterData);
 
 };
 
