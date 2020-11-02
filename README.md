@@ -16,10 +16,13 @@ Table of contents <a name="toc"></a>
 Common files
 
 *index.html -- provided html page for the assignment.
+<br>
 *static/css/style.css -- style sheet for webpage.
+<br>
 *static/images/nasa.png -- main image for webpage.
+<br>
 *static/js/data.js -- provided UFO dataset for the assignment.
-
+<br>
 ---
 
 ### Level1 <a name="1"></a>
@@ -29,8 +32,9 @@ Common files
 Files
 
 *index.html -- UFO Finder webpage (date search).
+<br>
 *static/js/app.js -- JavaScript for index.html webpage functionality.
-
+<br>
 ---
 
 ### Level 2 <a name="2"></a>
@@ -40,4 +44,6 @@ Files
 Files
 
 *index2.html -- UFO Finder webpage (five field search).
+<br>
 *static/js/app2.js -- JavaScript for index2.html webpage functionality.
+<br>
