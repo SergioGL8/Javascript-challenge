@@ -5,11 +5,11 @@
 var tableData = data;
 
 // function to display UFO sightings
-function dataDisplay(data) {
+function displayData(data) {
   var tbody = d3.select("tbody");
   data.forEach((item) => {
     var row = tbody.append("tr");
-    Object.values(item).forEach(([key, value]) => {
+    Object.entries(item).forEach(([key, value]) => {
       var cell = row.append("td");
       cell.html(value);
     });
@@ -25,7 +25,7 @@ function deleteTbody() {
   
 // initial display of all UFO sightings
 console.log(tableData);
-dataDisplay(tableData);
+displayData(tableData);
 
 // 'Filter Table' button
 var button = d3.select("#filter-btn");
@@ -65,5 +65,5 @@ button.on("click", function(event) {
   
   // display the database
   console.log(filteredData);
-  dataDisplay(filteredData);
+  displayData(filteredData);
 });
