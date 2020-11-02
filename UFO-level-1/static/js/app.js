@@ -28,7 +28,7 @@ function deleteTbody() {
     .selectAll("td").remove();
 };
 
-// display of all UFO sightings
+// display all UFO sightings
 console.log(tableData);
 displayData(tableData);
 
