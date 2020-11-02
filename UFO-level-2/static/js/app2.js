@@ -27,35 +27,53 @@ function deleteTbody() {
 console.log(tableData);
 displayData(tableData);
 
-// 'Filter Table' button
-var button = d3.select("#filter-btn");
-
-// filter the database
-button.on("click", function(event) {
-  
+//Create a function to Filter data
+function handleClick (){
   d3.event.preventDefault();
   deleteTbody();
-  
-  var filteredData = tableData;
-  var inputId = document.getElementsByClassName("form-control");
-  
-  // iterate through all the input fields
-  for (var i = 0; i < inputId.length; i++) {
-	
-	var idName = inputId[i].id;
-	var field = d3.select("#" + idName).property("value");
-	
-	// treat empty or space-only fields as a search for ALL for that field
-	  if (field.trim() !== "") {
-	    var filteredData = filteredData.filter(ufoSighting =>
-	    // match as case insensitive
-	  	ufoSighting[idName].toLowerCase().trim() ===
-		  field.toLowerCase().trim());
-  	};
+
+  var filterData = tableData;
+
+  var date = d3.select("#datetime").property("value");
+  var city = d3.select("#city").property("value");
+  var state = d3.select("#state").property("value");
+  var country = d3.select("#country").property("value");
+  var shape = d3.select("#shape").property("value");
+
+  // Create new variable of the original data
+  if (date.trim() !== "" ) {
+    // Create new table with filtered data
+    var filterData = filterData.filter(Sighting => Sighting.datetime === date);
   };
- 
+
+  if (city.trim() !== "" ) {
+      var cities = city.toLowerCase();
+      // Create new table with filtered data
+      var filterData = filterData.filter(Sighting => Sighting.city === cities);
+  };
+  
+  if (state.trim() !== "" ) {
+      var states = state.toLowerCase();
+      // Create new table with filtered data
+      var filterData = filterData.filter(Sighting => Sighting.state === states);
+  };
+
+  if (country.trim() !== "" ) {
+      var countries = country.toLowerCase();
+      // Create new table with filtered data
+      var filterData = filterData.filter(Sighting => Sighting.country === countries);
+  };
+  
+  if (shape.trim() !== "" ) {
+      var shapes = shape.toLowerCase();
+      // Create new table with filtered data
+      var filterData = filterData.filter(Sighting => Sighting.shape === shapes);
+  };
+
+  displayData(filterData)
+
   // display message if no records found
-  if (filteredData.length == 0) {
+  if (filterData.length == 0) {
     d3.select("tbody")
       .append("tr")
       .append("td")
@@ -64,6 +82,12 @@ button.on("click", function(event) {
   };
   
   // display the database
-  console.log(filteredData);
-  displayData(filteredData);
-});
+  console.log(filterData);
+  displayData(filterData);
+
+};
+
+// 'Filter Table' button
+d3.selectAll("#filter-btn").on("click", handleClick);
+  
+displayData(filterData);

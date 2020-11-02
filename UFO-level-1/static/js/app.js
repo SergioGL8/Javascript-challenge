@@ -48,8 +48,8 @@ button.on("click", function(event) {
   } else {
 
     // otherwise, display the filtered dataset  
-    var filteredData = tableData.filter(ufoSighting => 
-      ufoSighting.datetime === dateInput.trim());
+    var filteredData = tableData.filter(Sighting => 
+      Sighting.datetime === dateInput.trim());
   };
 
   // display a message if no records found
