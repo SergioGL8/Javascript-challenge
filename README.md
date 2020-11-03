@@ -37,4 +37,4 @@ Table of contents <a name="toc"></a>
 ##### Files
 
 * UFO-level-2/index.html -- UFO Finder webpage (five field search).
-* UFO-level-2/static/js/app2.js -- JavaScript for index2.html webpage functionality.
+* UFO-level-2/static/js/app2.js -- JavaScript for index.html webpage functionality.
