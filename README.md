@@ -27,8 +27,8 @@ Table of contents <a name="toc"></a>
 
 ##### Files
 
-* UFOindex.html -- UFO Finder webpage (date search).
-* static/js/app.js -- JavaScript for index.html webpage functionality.
+* UFO-level-1/index.html -- UFO Finder webpage (date search).
+* UFO-level-1/static/js/app.js -- JavaScript for index.html webpage functionality.
 
 ### Level 2 <a name="2"></a>
 #### Multiple Search Categories files (optional and complete)
@@ -36,5 +36,5 @@ Table of contents <a name="toc"></a>
 
 ##### Files
 
-* index2.html -- UFO Finder webpage (five field search).
-* static/js/app2.js -- JavaScript for index2.html webpage functionality.
+* UFO-level-2/index.html -- UFO Finder webpage (five field search).
+* UFO-level-2/static/js/app2.js -- JavaScript for index2.html webpage functionality.
