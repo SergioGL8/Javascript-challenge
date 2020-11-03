@@ -15,10 +15,10 @@ Table of contents <a name="toc"></a>
 
 #### Common files
 
-* index.html -- provided html page for the assignment.
-* static/css/style.css -- style sheet for webpage.
-* static/images/nasa.png -- main image for webpage.
-* static/js/data.js -- provided UFO dataset for the assignment.
+* startercode/index.html -- provided html page for the assignment.
+* startercode/css/style.css -- style sheet for webpage.
+* startercode/images/nasa.png -- main image for webpage.
+* startercode/js/data.js -- provided UFO dataset for the assignment.
 <br>
 
 ### Level1 <a name="1"></a>
